@@ -19,5 +19,5 @@ Usage
 
 	$ nodejs test.js
 
-	$ curl http://localhost/?url=http://yahoo.com
-	$ curl http://localhost/?url=http://tw.yahoo.com
+	$ curl http://localhost:8000/?url=http://yahoo.com
+	$ curl http://localhost:8000/?url=http://tw.yahoo.com
