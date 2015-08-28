@@ -1,17 +1,36 @@
 {
-	"name": "url-spam-checker",
-	"version": "0.0.1",
-	"description": "Fast url spam checker in JavaScript.",
-	"homepage": "https://github.com/changyy/node-url-spam-checker",
-	"author": {
-		"name": "Yuan-Yi Chang"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/changyy/node-url-spam-checker"
-	},
-	"main": "url-spam-checker.js",
-	"dependencies": {
-		"bloomfilter": ">= 0.0.16"
-  	}
+  "name": "url-spam-checker",
+  "version": "0.0.1",
+  "description": "Fast url spam checker in JavaScript.",
+  "homepage": "https://github.com/changyy/node-url-spam-checker",
+  "author": "Yuan-Yi Chang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/changyy/node-url-spam-checker"
+  },
+  "main": "url-spam-checker.js",
+  "dependencies": {
+    "bloomfilter": ">= 0.0.16"
+  },
+  "devDependencies": {
+    "vows": "0.8.1"
+  },
+  "bugs": {
+    "url": "https://github.com/changyy/node-url-spam-checker/issues"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodejs ./test/url-spam-check-api-test.js"
+  },
+  "keywords": [
+    "url",
+    "spam",
+    "check",
+    "fast",
+    "api"
+  ],
+  "license": "BSD"
 }
