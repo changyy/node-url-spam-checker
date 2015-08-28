@@ -25,7 +25,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "nodejs ./test/url-spam-check-api-test.js"
+    "test": "node ./test/url-spam-check-api-test.js"
   },
   "keywords": [
     "url",
