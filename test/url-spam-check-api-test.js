@@ -8,7 +8,8 @@ suite.addBatch(
 	{
 		"url_check": function() {
 			var
-				url_check = require('../lib/url-check'),
+				path = require('path'),
+				url_check = require( path.join(__dirname, '..', 'lib/url-check') ),
 				bf = require('bloomfilter')
 			;
 			var data = [
@@ -19,17 +20,17 @@ suite.addBatch(
 				data.length * 256 , 
 				8
 			);
-			assert.equal( url_check.check_hostname(bloom, 'yahoo.com'), null );
+			assert.equal( url_check.check_domain(bloom, 'yahoo.com'), null );
 			for (var i=0, cnt=data.length; i<cnt ; ++i)
 				bloom.add(data[i]);
-			assert.equal( url_check.check_hostname(bloom, 'yahoo.com') != null, true );
-			assert.equal( url_check.check_hostname(bloom, 'yahoo.com'), 'yahoo.com' );
-			assert.equal( url_check.check_hostname(bloom, 'tw.yahoo.com'), 'yahoo.com' );
-			assert.equal( url_check.check_hostname(bloom, 'yahoo.com.tw'), null );
-			assert.equal( url_check.check_hostname(bloom, 'google.com'), null );
-			assert.equal( url_check.check_hostname(bloom, 'google.com.tw'), 'google.com.tw');
-			assert.equal( url_check.check_hostname(bloom, 'www.google.com.tw'), 'google.com.tw');
-			assert.equal( url_check.check_hostname(bloom, 'faebook.com'), null );
+			assert.equal( url_check.check_domain(bloom, 'yahoo.com') != null, true );
+			assert.equal( url_check.check_domain(bloom, 'yahoo.com'), 'yahoo.com' );
+			assert.equal( url_check.check_domain(bloom, 'tw.yahoo.com'), 'yahoo.com' );
+			assert.equal( url_check.check_domain(bloom, 'yahoo.com.tw'), null );
+			assert.equal( url_check.check_domain(bloom, 'google.com'), null );
+			assert.equal( url_check.check_domain(bloom, 'google.com.tw'), 'google.com.tw');
+			assert.equal( url_check.check_domain(bloom, 'www.google.com.tw'), 'google.com.tw');
+			assert.equal( url_check.check_domain(bloom, 'faebook.com'), null );
 		},
 		"server": function() {
 			var server_port = 54321;
