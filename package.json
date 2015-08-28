@@ -1,0 +1,17 @@
+{
+	"name": "url-spam-checker",
+	"version": "0.0.1",
+	"description": "Fast url spam checker in JavaScript.",
+	"homepage": "https://github.com/changyy/node-url-spam-checker",
+	"author": {
+		"name": "Yuan-Yi Chang"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/changyy/node-url-spam-checker"
+	},
+	"main": "url-spam-checker.js",
+	"dependencies": {
+		"bloomfilter": ">= 0.0.16"
+  	}
+}
